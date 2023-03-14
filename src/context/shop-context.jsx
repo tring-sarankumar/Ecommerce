@@ -41,14 +41,6 @@ export const ShopContextProvider = (props) => {
     setCartItems(getDefaultCart());
   };
 
-  // const contextValue = {
-  //   cartItems,
-  //   addToCart,
-  //   updateCartItemCount,
-  //   removeFromCart,
-  //   getTotalCartAmount,
-  //   checkout,
-  // };
 
   const foo = useMemo(() => ({
     cartItems,
