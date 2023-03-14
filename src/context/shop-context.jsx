@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useMemo, useState } from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
@@ -41,19 +41,26 @@ export const ShopContextProvider = (props) => {
     setCartItems(getDefaultCart());
   };
 
-  const contextValue = {
+  // const contextValue = {
+  //   cartItems,
+  //   addToCart,
+  //   updateCartItemCount,
+  //   removeFromCart,
+  //   getTotalCartAmount,
+  //   checkout,
+  // };
+
+  const foo = useMemo(() => ({
     cartItems,
     addToCart,
     updateCartItemCount,
     removeFromCart,
     getTotalCartAmount,
     checkout,
-  };
-
-
+  }), [cartItems]);
 
   return (
-    <ShopContext.Provider value={contextValue}>
+    <ShopContext.Provider value={foo}>
       {props.children}
     </ShopContext.Provider>
   );
