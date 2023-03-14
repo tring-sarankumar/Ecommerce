@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
@@ -49,6 +49,8 @@ export const ShopContextProvider = (props) => {
     getTotalCartAmount,
     checkout,
   };
+
+
 
   return (
     <ShopContext.Provider value={contextValue}>

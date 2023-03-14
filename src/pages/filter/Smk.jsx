@@ -8,7 +8,7 @@ const Smk = () => {
        <div className="products">
         {PRODUCTS.map((product) => (
             product.brand==="smk"?
-          <Product data={product} />:""
+          <Product data={product} key={product.id} />:""
         ))}
         </div>
       

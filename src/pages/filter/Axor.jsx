@@ -9,7 +9,7 @@ const Axor = () => {
         <div className="products">
         {PRODUCTS.map((product) => (
             product.brand==="axor"?
-          <Product data={product} />:""
+          <Product data={product} key={product.id} />:""
         ))}
       </div>
       

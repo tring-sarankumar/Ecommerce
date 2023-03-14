@@ -8,7 +8,7 @@ const Re = () => {
         <div className="products">
         {PRODUCTS.map((product) => (
             product.brand==="re"?
-          <Product data={product} />:""
+          <Product data={product} key={product.id} />:""
         ))}
         </div>
       
