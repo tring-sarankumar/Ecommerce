@@ -17,7 +17,7 @@ function App() {
         <Router>
           <Navbar />
           <div className="left">
-          <Sidebar/>
+          <Sidebar />
           <Routes>
             <Route path="/" element={<Shop />} />
             <Route path="/contact" element={<Contact />} />
